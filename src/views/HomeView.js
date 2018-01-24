@@ -1,4 +1,5 @@
 import {Surface}        from 'arva-js/surfaces/Surface.js';
+import {InputSurface}   from 'arva-js/surfaces/InputSurface.js'
 import {View}           from 'arva-js/core/View.js';
 import {
     layout,
@@ -56,6 +57,13 @@ export class HomeView extends View {
         layout.translate(...translation.map((offset) => offset * 130), 10)(
             Thumbnail.with({isExpanded: this.options.showIcons})
         ));
+
+    /* Input field */
+
+    @layout
+        .stick.topLeft()
+        .size(400, 100)
+     inputField = InputSurface.with({placeholder: 'Please write your task here', type: 'text'})
 
     /* The item in the middle goes here */
     @layout

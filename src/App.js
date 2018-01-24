@@ -49,7 +49,7 @@ export class App extends ArvaApp {
                 image: 'http://arva.io/img/hub.png',
                 menuItems: [{
                     icon: AccountIcon,
-                    text: 'Menu item 1'
+                    text: 'To do list'
                 }]
             }
         }));
